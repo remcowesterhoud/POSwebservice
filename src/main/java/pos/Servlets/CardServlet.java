@@ -10,6 +10,8 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Remco on 23-9-2015.
@@ -18,11 +20,23 @@ import javax.ws.rs.core.MediaType;
 public class CardServlet {
 
     @GET
+
     @Produces(MediaType.APPLICATION_JSON)
     public String allCards(){
         CardRegister register = CardRegister.getCardRegister();
         Gson gson = new Gson();
-        return gson.toJson(register.getCards());
+        JsonElement jsonElement = gson.toJsonTree(register);
+        List<FidelityCard> cards = register.getCards();
+
+        for(FidelityCard card : cards){
+            jsonElement.getAsJsonObject().addProperty("self", "http://localhost:8080/fidelitycards/");
+        }
+
+
+
+            return gson.toJson(jsonElement);
+
+
     }
 
     @Path("/{cardcode}")

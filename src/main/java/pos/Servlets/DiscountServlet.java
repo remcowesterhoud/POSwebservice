@@ -12,9 +12,9 @@ import javax.ws.rs.core.MediaType;
 /**
  * Created by Laurens Oomen on 22-9-2015 at 15:48.
  */
+@Path("/discounts")
 public class DiscountServlet {
 
-//    @Path("/{barcode}")
 //    @GET
 //    @Produces(MediaType.APPLICATION_JSON)
 //    public String getDiscount(@PathParam("barcode") int[] barcodes){

@@ -1,9 +1,9 @@
 package pos.Servlets;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonElement;
 import pos.Controllers.Inventory;
 import pos.Models.Product;
-import pos.Models.ProductSpec;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -14,7 +14,7 @@ import javax.ws.rs.core.MediaType;
 /**
  * Created by Remco on 22-9-2015.
  */
-@Path("/product")
+@Path("/products")
 public class ProductServlet {
 
     @Path("/{barcode}")
@@ -25,17 +25,8 @@ public class ProductServlet {
         Product product = inventory.searchProduct(barcode);
 
         Gson gson = new Gson();
-        return gson.toJson(product);
-    }
-
-    @Path("/{barcode}/spec")
-    @GET
-    @Produces(MediaType.APPLICATION_JSON)
-    public String getProductPrice(@PathParam("barcode") int barcode){
-        Inventory inventory = Inventory.getInventory();
-        Product product = inventory.searchProduct(barcode);
-        ProductSpec spec = product.getSpec();
-        Gson gson = new Gson();
-        return gson.toJson(spec);
+        JsonElement jsonElement = gson.toJsonTree(product);
+        jsonElement.getAsJsonObject().addProperty("self", "http://localhost:8080/products/" + barcode);
+        return gson.toJson(jsonElement);
     }
 }

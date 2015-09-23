@@ -17,6 +17,15 @@ import javax.ws.rs.core.MediaType;
 @Path("/products")
 public class ProductServlet {
 
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public String allProducts(){
+        Inventory inventory = Inventory.getInventory();
+
+        Gson gson = new Gson();
+        return gson.toJson(inventory.getProducts());
+    }
+
     @Path("/{barcode}")
     @GET
     @Produces(MediaType.APPLICATION_JSON)

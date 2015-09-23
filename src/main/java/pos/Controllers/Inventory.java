@@ -48,6 +48,10 @@ public class Inventory {
         productList.remove(product);
     }
 
+    public List<Product> getProducts(){
+        return productList;
+    }
+
     public Product searchProduct(int productCode){
         for (Product product : productList){
             if (product.getProductCode() == productCode){

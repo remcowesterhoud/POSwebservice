@@ -7,6 +7,7 @@ import java.util.Scanner;
  */
 public abstract class Payment {
     protected double amount;
+    protected Scanner scanner = new Scanner(System.in);
 
     public Payment(double amount){
         this.amount = amount;

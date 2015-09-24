@@ -1,11 +1,11 @@
-package pos.Servlets;
+package REST.Servlets;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import pos.Controllers.CardRegister;
-import pos.Models.FidelityCard;
+import REST.Controllers.CardRegister;
+import REST.Models.FidelityCard;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;

@@ -1,4 +1,4 @@
-package pos.Enums;
+package REST.Enums;
 
 /**
  * Created by Remco on 22-9-2015.

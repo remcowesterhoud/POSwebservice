@@ -1,9 +1,9 @@
-package pos.Controllers;
+package REST.Controllers;
 
-import pos.Enums.Brand;
-import pos.Enums.ProductType;
-import pos.Models.Product;
-import pos.Models.ProductSpec;
+import REST.Enums.Brand;
+import REST.Enums.ProductType;
+import REST.Models.Product;
+import REST.Models.ProductSpec;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -1,6 +1,6 @@
-package pos.Controllers;
+package REST.Controllers;
 
-import pos.Models.FidelityCard;
+import REST.Models.FidelityCard;
 
 import java.util.ArrayList;
 import java.util.List;

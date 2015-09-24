@@ -1,4 +1,4 @@
-package pos.Models;
+package REST.Models;
 
 import java.util.HashMap;
 import java.util.Map;

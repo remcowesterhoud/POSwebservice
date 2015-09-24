@@ -1,9 +1,9 @@
-package pos.Servlets;
+package REST.Servlets;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
-import pos.Controllers.Inventory;
-import pos.Models.Product;
+import REST.Controllers.Inventory;
+import REST.Models.Product;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

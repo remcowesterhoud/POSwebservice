@@ -1,4 +1,4 @@
-package pos.Models;
+package REST.Models;
 
 /**
  * Created by Remco on 23-9-2015.

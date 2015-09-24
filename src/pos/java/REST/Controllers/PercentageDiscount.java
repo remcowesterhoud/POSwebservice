@@ -1,12 +1,13 @@
-package pos.Controllers;
+package REST.Controllers;
 
-import pos.Models.Discount;
-import pos.Models.Product;
+
+import REST.Models.Discount;
+import REST.Models.Product;
 
 /**
  * Created by Laurens Oomen on 23/09/15 at 15:43.
  */
-public class PercentageDiscount extends Discount{
+public class PercentageDiscount extends Discount {
 
     private double percentage;
 

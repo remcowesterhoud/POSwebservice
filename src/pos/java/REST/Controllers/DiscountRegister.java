@@ -1,6 +1,7 @@
-package pos.Controllers;
+package REST.Controllers;
 
-import pos.Models.Discount;
+
+import REST.Models.Discount;
 
 import java.util.ArrayList;
 import java.util.List;

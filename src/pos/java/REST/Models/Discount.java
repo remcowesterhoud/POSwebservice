@@ -1,4 +1,4 @@
-package pos.Models;
+package REST.Models;
 
 /**
  * Created by Laurens Oomen on 23/09/15 at 14:53.
